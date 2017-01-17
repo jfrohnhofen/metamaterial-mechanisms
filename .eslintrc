@@ -1,0 +1,21 @@
+{
+  "extends": "google",
+  "env": {
+    "browser": true,
+    "node": true
+  },
+  "globals": {
+    "Uint32Array": true,
+    "Float32Array": true
+  },
+  "rules": {
+    "array-bracket-spacing": [ "error", "always" ],
+    "brace-style": [ "error", "1tbs", { "allowSingleLine": true } ],
+    "keyword-spacing": [ "error", { "after": true, "before": true } ],
+    "max-len": [ "error", { "code": 120 } ],
+    "no-undef": [ "error" ],
+    "no-var": [ "off" ],
+    "object-curly-spacing": [ "error", "always" ],
+    "require-jsdoc": [ "off" ]
+  }
+}
