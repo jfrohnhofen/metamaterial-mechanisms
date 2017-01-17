@@ -14,6 +14,8 @@ module.exports = (function() {
 
     this.voxelGrid = voxelGrid;
 
+    // disable simulation for now
+    return;
     var url = 'ws://' + config.simulation.ip + ':' + config.simulation.port + '/simulation';
     this.websocket = new WebSocket(url);
     this.websocket.onopen = this.onConnect;
