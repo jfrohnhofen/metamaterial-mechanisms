@@ -28,8 +28,9 @@ The simulation works only on Windows, since there is no Grasshopper for Mac.
 
 1. install [Rhino 5](http://www.rhino3d.com/download)
 2. install [Grasshopper](http://www.grasshopper3d.com/page/download-1)
-3. install [karamba 1.1.0](http://www.food4rhino.com/app/karamba?etx=)  for licence choose "free" (NOT trial)
-4. copy the items from 'src/simulation/bin/' to Grasshopper's Components folder. Find the folder by opening Grasshopper in the File menu 'Special Folders' - 'Components Folder'.
+3. install [karamba 1.1.0](http://www.food4rhino.com/app/karamba?etx=)  
+    for licence choose "free" (NOT trial), use metric units
+4. copy the items from 'src/simulation/bin/' to Grasshopper's Components folder. Find the folder by opening Grasshopper in the File menu 'Special Folders' - 'Components Folder'. (opening Grasshopper: start Rhino and type "grasshopper" into Rhino's command line)
 
 To run the simulation, simply execute the batch script "1-START-SIMULATION.bat". As soon as the simulation is running, it can receive data from the editor.
 
