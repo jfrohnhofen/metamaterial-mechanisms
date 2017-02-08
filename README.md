@@ -20,15 +20,11 @@ The entry point of the editor is located in the folder 'voxel-editor'.
 1. install [node.js](https://nodejs.org/en/)
 2. change to the folder 'voxel-editor' and 
 4. run 
-```
-    npm install
-```. 
+    npm install 
 This will create a folder 'node_modules' that contains all dependencies.
 
 3. run the editor with
-```
-npm start
-```
+    npm start
 
 
 
