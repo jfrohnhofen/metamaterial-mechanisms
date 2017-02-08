@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MetamaterialSimulationInput", "MetamaterialInputComponent\MetamaterialSimulationInput.csproj", "{40482D48-1CEA-4D7F-A68A-3BF7C27C9B39}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MetamaterialSimulationOutput", "MetamaterialOutputComponent\MetamaterialSimulationOutput.csproj", "{0318F3B1-0F08-4EF6-92CE-760991AEA714}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug64|Any CPU = Debug64|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{40482D48-1CEA-4D7F-A68A-3BF7C27C9B39}.Debug|Any CPU.ActiveCfg = Debug64|Any CPU
+		{40482D48-1CEA-4D7F-A68A-3BF7C27C9B39}.Debug|Any CPU.Build.0 = Debug64|Any CPU
+		{40482D48-1CEA-4D7F-A68A-3BF7C27C9B39}.Debug64|Any CPU.ActiveCfg = Debug64|Any CPU
+		{40482D48-1CEA-4D7F-A68A-3BF7C27C9B39}.Debug64|Any CPU.Build.0 = Debug64|Any CPU
+		{40482D48-1CEA-4D7F-A68A-3BF7C27C9B39}.Debug64|Any CPU.Deploy.0 = Debug64|Any CPU
+		{40482D48-1CEA-4D7F-A68A-3BF7C27C9B39}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{40482D48-1CEA-4D7F-A68A-3BF7C27C9B39}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0318F3B1-0F08-4EF6-92CE-760991AEA714}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0318F3B1-0F08-4EF6-92CE-760991AEA714}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0318F3B1-0F08-4EF6-92CE-760991AEA714}.Debug64|Any CPU.ActiveCfg = Debug|Any CPU
+		{0318F3B1-0F08-4EF6-92CE-760991AEA714}.Debug64|Any CPU.Build.0 = Debug|Any CPU
+		{0318F3B1-0F08-4EF6-92CE-760991AEA714}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0318F3B1-0F08-4EF6-92CE-760991AEA714}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
