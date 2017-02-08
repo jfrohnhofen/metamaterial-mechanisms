@@ -44,7 +44,7 @@ You can install the simulation on a remote Windows machines and let the platform
 ##### Troubleshooting: 
 If Grasshopper cannot load the InputComponent, then it's dependencies might be blocked. Right-click the two .dll files in your Components folder and tick the checkbox "Unblock". Start the simulation using the batch script again.
 
-<img src="http://alexandraion.com/wp-content/uploads/unblock_dll.jpg" width="400" />
+<img src="https://www13.hpi.uni-potsdam.de/fileadmin/user_upload/fachgebiete/baudisch/projects/metamaterial/metamaterial-mechanisms/deploy-info--unblock_dll.jpg" width="400" />
 
 
 ##### For developers:
