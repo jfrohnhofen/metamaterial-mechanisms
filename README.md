@@ -19,10 +19,11 @@ The system implementation is described in our research paper: [https://hpi.de/ba
 You can try the editor here [https://jfrohnhofen.github.io/metamaterial-mechanisms/](https://jfrohnhofen.github.io/metamaterial-mechanisms/). However, the simulation won't work in the online version.
 
 For the full experience, you can download the editor and install it as follows:
+
 1. install [node.js](https://nodejs.org/en/)
 2. run ```npm install``` in the root folder (where package.json lies)
 
-To **start** the editor run ```npm start``` in the same directory.
+To start the editor run ```npm start``` in the same directory.
 
 
 
