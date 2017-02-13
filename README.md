@@ -28,7 +28,7 @@ To start the editor run ```npm start``` in the same directory.
 
 
 ## Simulation (on Windows only)
-The simulation works only on Windows, since there is no Grasshopper for Mac. 
+The simulation works only on Windows, since there is no Grasshopper for Mac. Note that the simulation is computationally expensive and therefore slow. For best results, move the force arrow slowly.  
 
 
 #### How to install:
@@ -37,13 +37,13 @@ The simulation works only on Windows, since there is no Grasshopper for Mac.
 2. install [Grasshopper](http://www.grasshopper3d.com/page/download-1)
 3. install [karamba 1.1.0](http://www.food4rhino.com/app/karamba?etx=)  
     for licence choose "free" (NOT trial), use metric units
-4. copy the items from 'src/simulation/bin/' to Grasshopper's Components folder. Find the folder by opening Grasshopper in the File menu 'Special Folders' - 'Components Folder'. (opening Grasshopper: start Rhino and type "grasshopper" into Rhino's command line)
+4. copy the items from './simulation/bin/' to Grasshopper's Components folder. Find the folder by opening Grasshopper in the File menu 'Special Folders' - 'Components Folder'. (opening Grasshopper: start Rhino and type "grasshopper" into Rhino's command line)
 
 To run the simulation, simply execute the batch script "1-START-SIMULATION.bat". As soon as the simulation is running, it can receive data from the editor.
 
 
 #### If you don't use Windows, you can install the simulation on some remote Windows-machine: 
-You can install the simulation on a remote Windows machines and let the platform-independent editor connect to that machine. The communication works via web sockets. You need to set the IP of your remote machine in 'config.json'. Set the editor's IP in 'src/simulation/editorURL.json'.
+You can install the simulation on a remote Windows machines and let the platform-independent editor connect to that machine. The communication works via web sockets. You need to set the IP of the machine that runs the simulation in ./config.json. Both computers have to be in the same network.
 
 
 ##### Troubleshooting: 
@@ -53,4 +53,4 @@ If Grasshopper cannot load the InputComponent, then it's dependencies might be b
 
 
 ##### For developers:
-The Grasshopper components are developed in Visual Studio 2012 and they target .NET 4.5. Pre- and post-build events copy the neccessary binaries to the bin folder. In case you develop the components further, you can add post-build events to copy the 4 binaries directly to the Grasshopper Components folder. You can also debug the components by pointing to Rhino.exe in the project settings - Debug - Start external program. (It's already set, but the path might differ on your machine.)
+The Grasshopper components are developed in Visual Studio 2012 and they target .NET 4.5. Pre- and post-build events copy the neccessary binaries to the ./simulation/bin/ folder. The C# projects also contain post-build events that additionally copy the 4 binaries directly into the Grasshopper Components folder. Note that these are absolut pahts and need to be ajusted to your system. Furthermore, you can also debug the components by pointing to Rhino.exe in the project settings - Debug - Start external program. (It's already set, but the path might differ on your machine.)

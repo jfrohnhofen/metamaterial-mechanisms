@@ -176,11 +176,7 @@ namespace MetamaterialSimulationInput
                     Rhino.RhinoApp.WriteLine("the currently set editor connection is: " + json);
 
                     var editorConfig = JObject.Parse(json);
-                    //SocketData.Url = "ws://" + editorConfig["ip"];
-                    //SocketData.Port = int.Parse(editorConfig["port"].ToString());
-                    var port = editorConfig["simulation"]["port"];
-
-                    SocketData.Port = (int) port;
+                    SocketData.Port = (int) editorConfig["simulation"]["port"];
 
                     _socketServer = new WebSocketServer(SocketData.Port);
                     _socketServer.AddWebSocketService(SocketData.Path, () => new SimulationWebSocketBehavior(this));
