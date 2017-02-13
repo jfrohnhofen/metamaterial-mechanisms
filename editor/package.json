@@ -4,7 +4,9 @@
   "description": "",
   "homepage": "https://hpi.de/baudisch/projects/metamaterial-mechanisms.html",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "start": "gulp"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/jfrohnhofen/metamaterial-mechanisms"
