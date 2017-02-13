@@ -1,0 +1,258 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto+Condensed:400,300);
+
+* {
+  border-radius: 0 !important;
+}
+
+body {
+  font-family: 'Roboto Condensed';
+  color: #58595b;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden;
+}
+
+#controls {
+  position: absolute;
+  right: 0;
+  width: 350px;
+  margin: 10px;
+}
+
+
+/* panels */
+
+.panel a {
+  text-decoration: none;
+}
+
+.panel {
+  background: #f2f2f2;
+  border: none;
+  margin-bottom: 5px;
+}
+
+.panel-body {
+  padding: 0 15px 10px 15px;
+  text-align: center;
+}
+
+.panel-heading {
+  background: #f2f2f2;
+  border: none;
+}
+
+.panel-heading a:after {
+  font-family: 'Glyphicons Halflings';
+  content: '\e113';
+  float: right;
+  color: 'grey';
+}
+
+.panel-heading a.collapsed:after {
+  content: '\e114';
+}
+
+
+/* buttons */
+
+.voxel-btn {
+  display: block;
+  float: left;
+  text-align: center;
+}
+
+.voxel-text-btn {
+  width: 135px;
+  margin: 5px 10px;
+  padding: 10px 15px;
+  background: #58595b;
+  border: solid 3px #ffffff;
+  color: #ffffff;
+  font-weight: 300;
+  font-size: 12pt;
+}
+
+.voxel-text-btn.active {
+/*   color: #d6d7d9;
+  background: #939597; */
+  border-color: #00adee;
+}
+
+.voxel-btn-img {
+  position: relative;
+}
+
+.voxel-btn-img .voxel-btn-selection {
+  position: absolute;
+  display: none;
+  z-index: 100;
+  width: 100%;
+  height: 100%;
+  background-size: 100%;
+}
+
+.voxel-btn.active .voxel-btn-selection {
+  display: block;
+}
+
+.voxel-btn-img img {
+  width: 100%;
+}
+
+
+/* modes */
+
+.voxel-mode-btn .voxel-btn-img {
+  margin: 5px -5px;
+  width: 65px;
+  font-size: 10pt;
+}
+
+.voxel-mode-btn .voxel-btn-img img {
+  padding: 4px;
+}
+
+.voxel-mode-btn .voxel-btn-img .voxel-btn-selection {
+  background-image: url('../img/mode_selected.png');
+  background-repeat: no-repeat;
+}
+
+#voxel-add-tool-btn {
+  margin-left: 15px;
+}
+
+#voxel-mirror-btn {
+  margin-top: -8px;
+}
+
+#voxel-mirror-btn p {
+  margin-top: -6px;
+}
+
+#voxel-mirror-btn .voxel-btn-img .voxel-btn-selection {
+  background-image: url('../img/mode_mirror_selected.png');
+  margin-top: 2.5px;
+}
+
+#voxel-tool-spacer {
+  float: left;
+  width: 25px;
+  height: 10px;
+}
+
+
+/* cells */
+
+.voxel-cells-btn {
+  background-color: #ffffff;
+  border: solid 0.25pt #B2B2B2;
+  margin: 3px;
+}
+
+.voxel-cells-btn .voxel-btn-img .voxel-btn-selection {
+  outline: solid 4px #00adee;
+  margin: -10px;
+}
+
+.voxel-cells-btn .voxel-btn-img {
+  padding: 10px;
+}
+
+.voxel-cells-container {
+  display: block;
+  clear: both;
+  margin-left: 15px;
+}
+
+
+/* stiffness */
+
+.voxel-stiffness-label {
+  float: left;
+  margin: 17px;
+}
+
+.voxel-stiffness-btn {
+  font-size: 8pt;
+}
+
+.voxel-stiffness-btn .voxel-btn-img {
+  margin: 5px -3px;
+  width: 40px;
+  height: 42px;
+}
+
+.voxel-stiffness-btn .voxel-btn-img img {
+  padding: 3px;
+}
+
+.voxel-stiffness-btn .voxel-btn-img .voxel-btn-selection {
+  background-image: url('../img/stiffness_selected.png');
+}
+
+
+/* advanced */
+
+#voxel-advanced-editor {
+  position: relative;
+  margin: auto;
+  width: 320px;
+  height: 150px;
+  overflow: hidden;
+}
+
+#voxel-advanced-canvas {
+  position: absolute;
+  left: -540px;
+  top: -540px;
+}
+
+#voxel-advanced-rotate-btn {
+  position: absolute;
+  z-index: 100;
+  top: 2px;
+  right: 2px;
+  margin: 2px;
+  width: 50px;
+  height: 50px;
+  background-image: url('../img/advanced_rotate.png');
+  background-size: 50px;
+}
+
+#voxel-advanced-rotate-btn:active {
+	outline: solid 4px #00adee;
+}
+
+
+/* info */
+
+#voxel-info-box {
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
+  font-size: 20pt;
+  padding: 20px;
+  background-color: rgba(1.0, 1.0, 1.0, 0.7);
+}
+
+
+/* misc */
+
+.voxel-inputs {
+  float: left;
+  width: 160px;
+  margin-top: 18px;
+}
+
+.voxel-input label {
+  width: 70px;
+}
+
+.voxel-input input {
+  width: 60px;
+  margin: 5px;
+  padding: 5px;
+  border: none;
+}
