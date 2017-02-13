@@ -1,5 +1,7 @@
 # Metamaterial mechanisms editor
 
+Online editor: [https://jfrohnhofen.github.io/metamaterial-mechanisms/](https://jfrohnhofen.github.io/metamaterial-mechanisms/)
+
 <img src="https://hpi.de/fileadmin/_processed_/csm_WEB_door_frontal-01_e7de4434b2.png" width="600" />
 <img src="https://hpi.de/fileadmin/_processed_/csm_WEB_editor-01_1d3222effd.png" width="600" />
 
