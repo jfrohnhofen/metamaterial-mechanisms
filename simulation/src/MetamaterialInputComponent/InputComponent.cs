@@ -169,15 +169,18 @@ namespace MetamaterialSimulationInput
             //read url in json
             try
             {   // Open the text file using a stream reader.
-                using (var reader = new StreamReader("editorURL.json"))
+                using (var reader = new StreamReader("../config.json"))
                 {
                     // Read the stream to a string, and write the string to the console.
                     var json = reader.ReadToEnd();
                     Rhino.RhinoApp.WriteLine("the currently set editor connection is: " + json);
 
                     var editorConfig = JObject.Parse(json);
-                    SocketData.Url = "ws://" + editorConfig["ip"];
-                    SocketData.Port = int.Parse(editorConfig["port"].ToString());
+                    //SocketData.Url = "ws://" + editorConfig["ip"];
+                    //SocketData.Port = int.Parse(editorConfig["port"].ToString());
+                    var port = editorConfig["simulation"]["port"];
+
+                    SocketData.Port = (int) port;
 
                     _socketServer = new WebSocketServer(SocketData.Port);
                     _socketServer.AddWebSocketService(SocketData.Path, () => new SimulationWebSocketBehavior(this));
@@ -186,6 +189,8 @@ namespace MetamaterialSimulationInput
                     if (_socketServer.IsListening)
                     {
                         Console.WriteLine("Listening on port {0}, and providing WebSocket services:", _socketServer.Port);
+                        Rhino.RhinoApp.WriteLine("Listening on port " + _socketServer.Port);
+
                         foreach (var path in _socketServer.WebSocketServices.Paths)
                             Console.WriteLine("- {0}", path);
                     }

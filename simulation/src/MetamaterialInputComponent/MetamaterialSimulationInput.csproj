@@ -84,7 +84,11 @@
   <PropertyGroup>
     <PostBuildEvent>copy "$(TargetDir)$(ProjectName).dll" "$(SolutionDir)..\bin\$(ProjectName).gha"
 copy "$(TargetDir)websocket-sharp.dll" "$(SolutionDir)..\bin\websocket-sharp.dll"
-copy "$(TargetDir)Newtonsoft.Json.dll" "$(SolutionDir)..\bin\Newtonsoft.Json.dll"</PostBuildEvent>
+copy "$(TargetDir)Newtonsoft.Json.dll" "$(SolutionDir)..\bin\Newtonsoft.Json.dll"
+
+copy "$(TargetDir)$(ProjectName).dll" "C:\Users\alex\AppData\Roaming\Grasshopper\Libraries\$(ProjectName).gha"
+copy "$(TargetDir)websocket-sharp.dll" "C:\Users\alex\AppData\Roaming\Grasshopper\Libraries\websocket-sharp.dll"
+copy "$(TargetDir)Newtonsoft.Json.dll" "C:\Users\alex\AppData\Roaming\Grasshopper\Libraries\Newtonsoft.Json.dll"</PostBuildEvent>
   </PropertyGroup>
   <PropertyGroup>
     <FallbackCulture>en-US</FallbackCulture>
@@ -97,6 +101,6 @@ copy "$(TargetDir)Newtonsoft.Json.dll" "$(SolutionDir)..\bin\Newtonsoft.Json.dll
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup>
-    <PreBuildEvent>copy "$(SolutionDir)..\editorURL.json" "$(TargetDir)editorURL.json"</PreBuildEvent>
+    <PreBuildEvent>copy "$(SolutionDir)..\..\config.json" "$(TargetDir)..\config.json"</PreBuildEvent>
   </PropertyGroup>
 </Project>

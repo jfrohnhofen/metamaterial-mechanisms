@@ -1,6 +1,7 @@
 node_modules
-npm-debug.log
+*.log
 *.suo
 *.user
 simulation/src/**/bin
+simulation/src/**/*.json
 obj

@@ -75,7 +75,10 @@
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PostBuildEvent>copy "$(TargetDir)$(ProjectName).dll" "$(SolutionDir)..\bin\$(ProjectName).gha"</PostBuildEvent>
+    <PostBuildEvent>copy "$(TargetDir)$(ProjectName).dll" "$(SolutionDir)..\bin\$(ProjectName).gha"
+
+copy "$(TargetDir)$(ProjectName).dll" "C:\Users\alex\AppData\Roaming\Grasshopper\Libraries\$(ProjectName).gha"
+</PostBuildEvent>
   </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
