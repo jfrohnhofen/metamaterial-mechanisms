@@ -1,17 +1,17 @@
 'use strict';
 
-const $               = require('jquery');
-const FileSaver       = require('file-saver');
-//const jscad           = require('jscad');
+const $                  = require('jquery');
+const FileSaver          = require('file-saver');
 
-const bind            = require('./misc/bind');
+const bind               = require('./misc/bind');
 
-const AdvancedEditor  = require('./tools/advanced_editor');
-const VoxelAddTool    = require('./tools/voxel_add_tool');
-const VoxelDeleteTool = require('./tools/voxel_delete_tool');
-const VoxelEditTool   = require('./tools/voxel_edit_tool');
-const AnchorTool      = require('./tools/anchor_tool');
-const ForceTool       = require('./tools/force_tool');
+const AdvancedEditor     = require('./tools/advanced_editor');
+const VoxelAddTool       = require('./tools/voxel_add_tool');
+const VoxelDeleteTool    = require('./tools/voxel_delete_tool');
+const VoxelEditTool      = require('./tools/voxel_edit_tool');
+const VoxelSmoothingTool = require('./tools/voxel_smoothing_tool');
+const AnchorTool         = require('./tools/anchor_tool');
+const ForceTool          = require('./tools/force_tool');
 
 module.exports = (function() {
 
@@ -34,6 +34,7 @@ module.exports = (function() {
       'add-tool': new VoxelAddTool(this.renderer, this.voxelGrid),
       'delete-tool': new VoxelDeleteTool(this.renderer, this.voxelGrid),
       'edit-tool': new VoxelEditTool(this.renderer, this.voxelGrid),
+      'smoothing-tool': new VoxelSmoothingTool(this.renderer, this.voxelGrid),
       'anchor-tool': new AnchorTool(this.renderer, this.voxelGrid),
       'force-tool': new ForceTool(this.renderer, this.voxelGrid, this.simulation)
     };
@@ -56,7 +57,8 @@ module.exports = (function() {
     this.advancedEditor = new AdvancedEditor([
       this.tools['add-tool'],
       this.tools['delete-tool'],
-      this.tools['edit-tool']
+      this.tools['edit-tool'],
+      this.tools['smoothing-tool']
     ]);
 
     this.parseGridSettings();
@@ -85,6 +87,10 @@ module.exports = (function() {
     } else {
       $('#voxel-mirror-btn').removeClass('active');
     }
+  }
+
+  Controls.prototype.alterMouseEvents = function() {
+    this.tools['smoothing-tool'].alterMouseEvents();
   }
 
   Controls.prototype.setCuboidMode = function(cuboidMode) {
@@ -153,6 +159,7 @@ module.exports = (function() {
         break;
       case 17:
         this.setCuboidMode(false);
+        this.alterMouseEvents();
         break;
     }
   }
@@ -166,6 +173,7 @@ module.exports = (function() {
         break;
       case 17:
         this.setCuboidMode(true);
+        this.alterMouseEvents();
         break;
       case 27:
         this.activeTool.reset();

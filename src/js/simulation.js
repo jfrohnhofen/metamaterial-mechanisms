@@ -1,6 +1,5 @@
 'use strict';
 
-const websocket       = require('websocket');
 const fs              = require('fs');
 const path            = require('path');
 
@@ -13,15 +12,8 @@ module.exports = (function() {
     bind(this);
 
     this.voxelGrid = voxelGrid;
-
-    // disable simulation for now
-    return;
     var url = 'ws://' + config.simulation.ip + ':' + config.simulation.port + '/simulation';
-    this.websocket = new WebSocket(url);
-    this.websocket.onopen = this.onConnect;
-    this.websocket.onerror = this.onConnectFailed;
-    this.websocket.onmessage = this.onReceivedMessage;
-    this.websocket.onclose = this.onClose;
+    this.connect(url);
   }
 
   Simulation.prototype.start = function() {
@@ -83,7 +75,11 @@ module.exports = (function() {
 
   Simulation.prototype.connect = function(url) {
     this.url = url || this.url;
-    this.client.connect(this.url);
+    this.websocket = new WebSocket(this.url);
+    this.websocket.onopen = this.onConnect;
+    this.websocket.onerror = this.onConnectFailed;
+    this.websocket.onmessage = this.onReceivedMessage;
+    this.websocket.onclose = this.onClose;
   }
 
   Simulation.prototype.sendMessage = function(message) {

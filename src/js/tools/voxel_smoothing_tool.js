@@ -3,6 +3,7 @@
 const bind  = require('../misc/bind');
 const VoxelTool  = require('./voxel_tool');
 
+const _     = require('lodash');
 const THREE = require('three');
 
 module.exports = (function() {

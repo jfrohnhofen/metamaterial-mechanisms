@@ -295,7 +295,7 @@ module.exports = (function() {
     const _this = this; // necessary for using in loops because JS is a douche
     this.badVoxels = {};
 
-    for (const voxelCoordinate in this.voxels) {
+    for (var voxelCoordinate in this.voxels) {
       const currentVoxel = this.voxels[voxelCoordinate];
       // reset current colors
       if (currentVoxel.color != undefined){
