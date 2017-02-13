@@ -4,7 +4,7 @@ const fs              = require('fs');
 const path            = require('path');
 
 const bind      = require('./misc/bind');
-const config    = require('../../config');
+const config    = require('../../../config');
 
 module.exports = (function() {
 

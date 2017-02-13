@@ -1,6 +1,6 @@
 node_modules
 npm-debug.log
-/src/simulation/src/*.suo
-/src/simulation/src/MetamaterialInputComponent/*.user
-bin
+*.suo
+*.user
+simulation/src/**/bin
 obj
