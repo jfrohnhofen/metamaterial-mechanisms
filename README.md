@@ -2,12 +2,16 @@
 
 Online editor: [https://jfrohnhofen.github.io/metamaterial-mechanisms/](https://jfrohnhofen.github.io/metamaterial-mechanisms/)
 
-<img src="https://hpi.de/fileadmin/_processed_/csm_WEB_door_frontal-01_e7de4434b2.png" width="600" />
-<img src="https://hpi.de/fileadmin/_processed_/csm_WEB_editor-01_1d3222effd.png" width="600" />
+## About this repository
+1. Please note that this is **not a product**, but a research prototype. This means that support is limited.
+2. If you have issues, please post them in the issues tab here on github (e.g. [installation issues](https://github.com/jfrohnhofen/metamaterial-mechanisms/issues/2)), not via email. In case someone else has the same problem, they can then look up the answer directly.
+3. If you need help, please describe the problem you have precisely and which steps you completed, which browser, etc. Without knowing **what** does not work (as opposed to *that* is does not work), it is impossible to help. 
+4. Please help each other out. If you know the answer, post it directly.
 
 This is the editor for the research paper [Metamaterial Mechanisms](https://hpi.de/baudisch/projects/metamaterial-mechanisms.html). If you want to print the objects shown in the paper, find them in our [thingiverse collection](http://www.thingiverse.com/HassoPlattnerInstitute_HCI/collections/metamaterial-mechanisms).
 
-Please note that this is a *research prototype* implementation. Feel free to add and discuss issues in the discussion board and to help each other out. 
+<img src="https://hpi.de/fileadmin/_processed_/csm_WEB_door_frontal-01_e7de4434b2.png" width="600" />
+<img src="https://hpi.de/fileadmin/_processed_/csm_WEB_editor-01_1d3222effd.png" width="600" />
 
 The editor consists of 2 main components: 
 
@@ -22,8 +26,8 @@ You can try the editor here [https://jfrohnhofen.github.io/metamaterial-mechanis
 
 For the full experience, you can download the editor and install it as follows:
 
-1. install [node.js](https://nodejs.org/en/)
-2. run ```npm install``` in the root folder (where package.json lies)
+1. install [node.js](https://nodejs.org/en/) (tutorial: http://blog.teamtreehouse.com/install-node-js-npm-windows)
+2. run ```npm install``` in the root folder of this editor (where package.json lies) **in your command prompt**. this will create a folder called 'node_modules' for you.
 
 To start the editor run ```npm start``` in the same directory.
 
