@@ -32,7 +32,7 @@ For the full experience, you can download the editor and install it as follows:
 This will create a folder called 'node_modules' for you. 
 If you get an error that git is not found --> then install git (https://www.atlassian.com/git/tutorials/install-git#windows) and make sure it is added to your path variables.
 
-To start the editor run ```npm start``` in the same directory.
+3. start the editor by running the command ```npm start``` in the same directory.
 
 
 
