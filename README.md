@@ -5,7 +5,7 @@ Online editor: [https://jfrohnhofen.github.io/metamaterial-mechanisms/](https://
 ## About this repository
 1. Please note that this is **not a product**, but a research prototype. This means that support is limited.
 2. If you have issues, please post them in the issues tab here on github (e.g. [installation issues](https://github.com/jfrohnhofen/metamaterial-mechanisms/issues/2)), not via email. In case someone else has the same problem, they can then look up the answer directly.
-3. If you need help, please describe the problem you have precisely and which steps you completed, which browser, etc. Without knowing **what** does not work (as opposed to *that* is does not work), it is impossible to help. 
+3. If you need help, please describe the problem you have precisely and which steps you completed, which browser, etc. Without knowing **what** does not work (as opposed to *that* it does not work), it is impossible to help. 
 4. Please help each other out. If you know the answer, post it directly.
 
 This is the editor for the research paper [Metamaterial Mechanisms](https://hpi.de/baudisch/projects/metamaterial-mechanisms.html). If you want to print the objects shown in the paper, find them in our [thingiverse collection](http://www.thingiverse.com/HassoPlattnerInstitute_HCI/collections/metamaterial-mechanisms).
