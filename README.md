@@ -27,7 +27,10 @@ You can try the editor here [https://jfrohnhofen.github.io/metamaterial-mechanis
 For the full experience, you can download the editor and install it as follows:
 
 1. install [node.js](https://nodejs.org/en/) (tutorial: http://blog.teamtreehouse.com/install-node-js-npm-windows)
-2. run ```npm install``` in the root folder of this editor (where package.json lies) **in your command prompt**. this will create a folder called 'node_modules' for you.
+2. run ```npm install``` in the root folder of this editor (where package.json lies) **in your command prompt**. 
+
+This will create a folder called 'node_modules' for you. 
+If you get an error that git is not found --> then install git (https://www.atlassian.com/git/tutorials/install-git#windows) and make sure it is added to your path variables.
 
 To start the editor run ```npm start``` in the same directory.
 
