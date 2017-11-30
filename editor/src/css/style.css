@@ -253,7 +253,7 @@ body {
 .voxel-inputs {
   float: left;
   width: 160px;
-  /* margin-top: 18px; */
+  margin-top: 18px; 
 }
 
  .voxel-input label {
