@@ -118,7 +118,7 @@
 			<div class="panel-heading">
 				<h4 class="panel-title"><a data-target="#voxel-simulation-collapse" data-toggle="collapse" href="#voxel-simulation-collapse">deformation simulation</a></h4>
 			</div>
-			<div class="panel-collapse collapse" id="voxel-simulation-collapse">
+			<div class="panel-collapse collapse in" id="voxel-simulation-collapse">
 				<div class="panel-body">
 					<div class="voxel-btn voxel-text-btn voxel-tool-btn" id="voxel-anchor-tool-btn">
 						edit anchors
@@ -126,6 +126,15 @@
 					<div class="voxel-btn voxel-text-btn voxel-tool-btn" id="voxel-force-tool-btn">
 						apply force
 					</div>
+					  <div class="voxel-inputs"> 
+						 <!-- <div class="voxel-input">  -->
+							<label>URL:</label><input id="simulation-url" value="127.0.0.1:1234" style="width: 100px">
+						 <!-- </div>  -->
+					</div> 
+					<div class="voxel-btn voxel-text-btn-small" id="simulation-url-update-btn" >
+						update
+					</div> 
+
 				</div>
 			</div>
 		</div>

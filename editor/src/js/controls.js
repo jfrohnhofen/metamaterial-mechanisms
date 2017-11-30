@@ -21,6 +21,7 @@ module.exports = (function() {
     this.renderer = renderer;
     this.voxelGrid = voxelGrid;
     this.simulation = simulation;
+    this.updateSimulationURL();
 
     this.cellSize = 5.0;
     this.minThickness = 0.4;
@@ -29,6 +30,8 @@ module.exports = (function() {
 
     $('#voxel-import-btn').click(this.import);
     $('#voxel-export-btn').click(this.export);
+
+    $('#simulation-url-update-btn').click(this.updateSimulationURL);
 
     this.tools = {
       'add-tool': new VoxelAddTool(this.renderer, this.voxelGrid),
@@ -144,6 +147,11 @@ module.exports = (function() {
   Controls.prototype.export = function() {
     var stlBinary = this.voxelGrid.export().toStlBinary();
     FileSaver.saveAs(stlBinary, 'export.stl');
+  }
+  
+  Controls.prototype.updateSimulationURL = function() {
+    console.log('update URL');
+    this.simulation.setURL($('#simulation-url').val());
   }
 
   Controls.prototype.onKeyDown = function(evt) {

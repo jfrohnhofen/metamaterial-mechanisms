@@ -4,7 +4,7 @@ const fs              = require('fs');
 const path            = require('path');
 
 const bind      = require('./misc/bind');
-const config    = require('../../../config');
+// const config    = require('../../../config');
 
 module.exports = (function() {
 
@@ -12,9 +12,20 @@ module.exports = (function() {
     bind(this);
 
     this.voxelGrid = voxelGrid;
-    var url = 'ws://' + config.simulation.ip + ':' + config.simulation.port + '/simulation';
-    this.connect(url);
+    // var url = 'ws://' + config.simulation.ip + ':' + config.simulation.port + '/simulation';
+    // this.connect(url);
   }
+
+  Simulation.prototype.setURL = function(url) {
+    if(this.running){
+      this.stop();
+      this.running = false;
+    }
+
+    this.url = 'ws://' + url + '/simulation';
+    this.connect(this.url);
+  }
+
 
   Simulation.prototype.start = function() {
     this.running = true;
