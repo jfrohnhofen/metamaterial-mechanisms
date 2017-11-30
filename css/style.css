@@ -74,6 +74,16 @@ body {
   font-size: 12pt;
 }
 
+.voxel-text-btn-small {
+  /* width: 135px; */
+  /* margin: 5px 10px; */
+  padding: 3px 15px; 
+  background: #58595b;
+  border: solid 2px #ffffff;
+  color: #ffffff;
+  font-weight: 300;
+}
+
 .voxel-text-btn.active {
 /*   color: #d6d7d9;
   background: #939597; */
@@ -243,16 +253,26 @@ body {
 .voxel-inputs {
   float: left;
   width: 160px;
-  margin-top: 18px;
+  margin-top: 18px; 
 }
 
-.voxel-input label {
-  width: 70px;
-}
+ .voxel-input label {
+  width: 70px; 
+} 
 
-.voxel-input input {
+input {
   width: 60px;
   margin: 5px;
   padding: 5px;
   border: none;
 }
+
+ .stackpanel-horizontal {
+  float: left;
+}
+
+span.clear {
+  height: 1px;
+  float: none;
+  clear: both;
+} 
