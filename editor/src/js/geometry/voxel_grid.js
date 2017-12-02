@@ -98,6 +98,51 @@ module.exports = (function() {
     return exportScene;
   };
 
+  VoxelGrid.prototype.load = function(data) {
+    this.reset();
+
+    for(var i = 0; i < data.length; i++){
+      const voxelData = data[i];
+      const position = new THREE.Vector3(voxelData.position.x, voxelData.position.y, voxelData.position.z);
+
+      const firstDirection = _.indexOf(voxelData.directions, true);
+
+      if(firstDirection == -1) {
+        this.addVoxel(position, voxelData.features, 1, voxelData.stiffness);
+        continue;
+      } 
+
+      this.addVoxel(position, voxelData.features, firstDirection, voxelData.stiffness);
+      const voxel = this.voxelAtPosition(position);
+
+      for(var direction = firstDirection + 1; direction < 3; direction++){
+        if(voxelData.directions[direction])
+          voxel.update(voxelData.features, direction);
+      }
+    }
+
+    this.update();
+  }
+
+  VoxelGrid.prototype.save = function() {
+    const voxelSaveData = [];
+
+    for (var key in this.voxels){
+      const currentVoxel = this.voxels[key];
+
+      var voxelSave = {
+        position: currentVoxel.position,
+        features: currentVoxel.features,
+        directions: currentVoxel.directions,
+        stiffness: currentVoxel.stiffness
+      };
+
+      voxelSaveData.push(voxelSave);
+    }
+
+    return voxelSaveData;
+  }
+
   VoxelGrid.prototype.update = function() {
     this.buffer.update();
   };

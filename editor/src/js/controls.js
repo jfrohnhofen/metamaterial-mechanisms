@@ -30,6 +30,8 @@ module.exports = (function() {
 
     $('#voxel-import-btn').click(this.import);
     $('#voxel-export-btn').click(this.export);
+    $('#voxel-load-btn').click(this.load);
+    $('#voxel-save-btn').click(this.save);
 
     $('#simulation-url-update-btn').click(this.updateSimulationURL);
 
@@ -148,7 +150,30 @@ module.exports = (function() {
     var stlBinary = this.voxelGrid.export().toStlBinary();
     FileSaver.saveAs(stlBinary, 'export.stl');
   }
-  
+
+  Controls.prototype.load = function () {
+    $('<input type="file" accept=".mm">').on('change', function(event) {
+      var file = event.target.files[0];
+      
+      if (file) {
+        var reader = new FileReader();
+        reader.onload = function() {
+          const data = JSON.parse(reader.result);
+          this.voxelGrid.load(data);
+        }.bind(this);
+
+        reader.readAsText(file);
+      }
+    }.bind(this)).click();
+  }
+
+  Controls.prototype.save = function () {
+    const data = this.voxelGrid.save();
+    const json = JSON.stringify(data);
+    const blob = new Blob([json], {type: "text/plain;charset=utf-8"});
+    FileSaver.saveAs(blob, 'saved.mm');
+  }
+
   Controls.prototype.updateSimulationURL = function() {
     console.log('update URL');
     this.simulation.setURL($('#simulation-url').val());

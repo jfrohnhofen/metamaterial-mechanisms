@@ -276,7 +276,7 @@ module.exports = (function() {
     var oldDirection;
     if (this.featureDirection != undefined){
       oldDirection = this.featureDirection;
-    } else{
+    } else {
       oldDirection = direction;
     }
     const oldFeatureVertices = this.featureVertices;
@@ -439,7 +439,7 @@ module.exports = (function() {
     }
   };
 
-  const cubeCornerBeams = [[6,1],[7,0],[4,3],[5,2]]; // beams that creat diagnal accross the cube
+  const cubeCornerBeams = [[6,1],[7,0],[4,3],[5,2]]; // beams that create diagnal accross the cube
   Voxel.prototype.isSolid = function() {
     if(this.featureDirection == -1){
       return true;

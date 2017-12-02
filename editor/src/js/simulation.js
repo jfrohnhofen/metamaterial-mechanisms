@@ -74,6 +74,7 @@ module.exports = (function() {
 
     this.busy = true;
     this.simulatedForce = force;
+    
     console.log('Sending simulation parameters...');
     this.sendMessage({
       method: 'Simulate',
