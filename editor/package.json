@@ -30,7 +30,7 @@
     "gulp-livereload": "^3.8.1",
     "gulp-webserver": "^0.9.1",
     "merge-stream": "^1.0.1",
-    "vinyl-source-stream": "^1.1.0"
+    "vinyl-source-stream": "^2.0.0"
   },
   "dependencies": {
     "bootstrap": "^3.3.7",
@@ -41,6 +41,7 @@
     "stl-reader": "^3.0.1",
     "three": "^0.82.1",
     "three-orbit-controls": "^82.1.0",
+    "vinyl-fs": "^3.0.3",
     "voxelize": "^1.0.0",
     "websocket": "^1.0.23"
   }
