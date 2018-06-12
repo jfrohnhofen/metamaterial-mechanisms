@@ -2,16 +2,20 @@
 
 Online editor: [https://jfrohnhofen.github.io/metamaterial-mechanisms/](https://jfrohnhofen.github.io/metamaterial-mechanisms/)
 
-## About this repository
+### For help with issues:
+1. **Post here**. Please post them in the issues tab here on github (e.g. [installation issues](https://github.com/jfrohnhofen/metamaterial-mechanisms/issues/2)), **not via email**. Someone else might have the same question and will appreciate finding the answer here.
+2. **Be specific**. Please describe the problem you have precisely. Add screenshots, console output and log files. Describe your system (Operating System, Browser, ...) and which steps you completed. Without knowing *what* does not work (as opposed to *that* it does not work), it is impossible to help. 
+3. Please help each other out. If you know the answer, post it directly.
+
+### Status of this code
 1. Please note that this is **not a product**, but a research prototype. This means that support is limited.
-2. If you have issues, please post them in the issues tab here on github (e.g. [installation issues](https://github.com/jfrohnhofen/metamaterial-mechanisms/issues/2)), not via email. In case someone else has the same problem, they can then look up the answer directly.
-3. If you need help, please describe the problem you have precisely and which steps you completed, which browser, etc. Without knowing **what** does not work (as opposed to *that* it does not work), it is impossible to help. 
-4. Please help each other out. If you know the answer, post it directly.
+2. Only tested on **Chrome**. Use that browser, if something's strange. (I heard Firefox works too.) 
+
 
 This is the editor for the research paper [Metamaterial Mechanisms](https://hpi.de/baudisch/projects/metamaterial-mechanisms.html). If you want to print the objects shown in the paper, find them in our [thingiverse collection](http://www.thingiverse.com/HassoPlattnerInstitute_HCI/collections/metamaterial-mechanisms).
 
-<img src="https://hpi.de/fileadmin/_processed_/csm_WEB_door_frontal-01_e7de4434b2.png" width="600" />
-<img src="https://hpi.de/fileadmin/_processed_/csm_WEB_editor-01_1d3222effd.png" width="600" />
+<img src="https://hpi.de/fileadmin/_processed_/csm_WEB_door_frontal-01_e7de4434b2.png" height="160" />
+<img src="https://hpi.de/fileadmin/_processed_/csm_WEB_editor-01_1d3222effd.png" height="160" />
 
 The editor consists of 2 main components: 
 
@@ -20,6 +24,8 @@ The editor consists of 2 main components:
 
 The system implementation is described in our research paper: [https://hpi.de/baudisch/projects/metamaterial-mechanisms.html](https://hpi.de/baudisch/projects/metamaterial-mechanisms.html)
 
+
+# How to install
 
 ## Editor
 You can try the editor here [https://jfrohnhofen.github.io/metamaterial-mechanisms/](https://jfrohnhofen.github.io/metamaterial-mechanisms/). However, the simulation won't work in the online version.
