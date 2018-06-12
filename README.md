@@ -14,7 +14,7 @@ Online editor: [https://jfrohnhofen.github.io/metamaterial-mechanisms/](https://
 
 This is the editor for the research paper [Metamaterial Mechanisms](https://hpi.de/baudisch/projects/metamaterial-mechanisms.html). If you want to print the objects shown in the paper, find them in our [thingiverse collection](http://www.thingiverse.com/HassoPlattnerInstitute_HCI/collections/metamaterial-mechanisms).
 
-<img src="https://hpi.de/fileadmin/_processed_/csm_WEB_door_frontal-01_e7de4434b2.png" height="150" /> <img src="https://hpi.de/fileadmin/_processed_/csm_WEB_editor-01_1d3222effd.png" height="150" />
+<img src="https://hpi.de/fileadmin/_processed_/csm_WEB_door_frontal-01_e7de4434b2.png" height="170" /> <img src="https://hpi.de/fileadmin/_processed_/csm_WEB_editor-01_1d3222effd.png" height="170" />
 
 The editor consists of 2 main components: 
 
